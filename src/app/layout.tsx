@@ -20,18 +20,19 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Posada Motors | Precision. Presence. Power.",
+  title: "Posada Motors | V8 Hybrid Supercars",
   description:
-    "Posada Motors crafts next-generation electric vehicles where performance, elegance, and intelligence converge. Experience the future of mobility.",
+    "Posada Motors crafts V8 hybrid supercars that unite mechanical soul with electric precision. Apex, Pulse, and Horizon — precision, presence, power.",
   keywords: [
-    "electric vehicles",
-    "luxury EV",
+    "V8 hybrid supercars",
+    "hybrid supercar",
     "Posada Motors",
-    "performance electric cars",
-    "sustainable mobility",
+    "performance hybrid",
+    "twin-turbo V8",
+    "luxury supercar",
   ],
   openGraph: {
-    title: "Posada Motors",
+    title: "Posada Motors — V8 Hybrid Supercars",
     description: "Precision. Presence. Power.",
     type: "website",
   },

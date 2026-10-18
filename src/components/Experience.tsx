@@ -21,12 +21,12 @@ export default function Experience() {
             </p>
             <h2 className="font-display text-4xl md:text-5xl font-semibold tracking-tight mb-6">
               Configure your{" "}
-              <span className="text-accent-gradient">presence</span>
+              <span className="text-accent-gradient">supercar</span>
             </h2>
             <p className="text-muted text-lg leading-relaxed mb-8">
-              From exterior finishes and interior materials to performance
-              packages and intelligent options — every Posada is a personal
-              statement. Start designing yours today.
+              Choose exterior finishes, interior materials, performance packages,
+              and hybrid system calibrations. Every Posada is a personal statement
+              of power and presence. Start designing yours today.
             </p>
             <div className="flex flex-wrap gap-4">
               <a

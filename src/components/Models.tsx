@@ -7,38 +7,38 @@ const models = [
   {
     id: "apex",
     name: "Apex",
-    tagline: "The flagship sedan",
-    range: "620 mi",
-    accel: "1.9s",
-    power: "1,100 hp",
-    price: "From $128,000",
+    tagline: "Grand Touring Hybrid",
+    range: "V8 + e-motors",
+    accel: "2.1s",
+    power: "1,250 hp",
+    price: "From $285,000",
     color: "from-cyan-500/20 to-teal-600/10",
     description:
-      "Sculpted for the open road. Dual-motor all-wheel drive, adaptive air suspension, and a cabin that anticipates every need.",
-  },
-  {
-    id: "horizon",
-    name: "Horizon",
-    tagline: "Command the landscape",
-    range: "580 mi",
-    accel: "2.4s",
-    power: "980 hp",
-    price: "From $142,000",
-    color: "from-violet-500/20 to-indigo-600/10",
-    description:
-      "Elevated presence. Three-row capability without compromise. Intelligent terrain response and panoramic quiet.",
+      "The ultimate expression of Posada. Twin-turbo 4.0L V8 mated to high-output electric motors. Effortless continent-crossing speed with visceral soundtrack.",
   },
   {
     id: "pulse",
     name: "Pulse",
-    tagline: "Pure kinetic art",
-    range: "490 mi",
-    accel: "1.7s",
-    power: "1,250 hp",
-    price: "From $165,000",
+    tagline: "Track-bred intensity",
+    range: "V8 Hybrid",
+    accel: "1.9s",
+    power: "1,480 hp",
+    price: "From $365,000",
     color: "from-rose-500/20 to-orange-600/10",
     description:
-      "Track-bred intensity meets everyday elegance. Carbon architecture, active aero, and the purest driving connection.",
+      "Carbon-intensive architecture, active aero, and a hybrid system tuned for maximum lap times. Pure kinetic art for the dedicated driver.",
+  },
+  {
+    id: "horizon",
+    name: "Horizon",
+    tagline: "Open-air presence",
+    range: "V8 Hybrid",
+    accel: "2.4s",
+    power: "1,180 hp",
+    price: "From $315,000",
+    color: "from-violet-500/20 to-indigo-600/10",
+    description:
+      "Roadster freedom with supercar performance. Retractable hardtop, adaptive chassis, and the same V8 hybrid heart — refined for open skies.",
   },
 ];
 
@@ -60,7 +60,7 @@ export default function Models() {
           </p>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight">
             Three expressions of{" "}
-            <span className="text-accent-gradient">excellence</span>
+            <span className="text-accent-gradient">V8 hybrid power</span>
           </h2>
         </motion.div>
 
@@ -95,8 +95,8 @@ export default function Models() {
 
                 <div className="grid grid-cols-3 gap-3 text-center">
                   <div>
-                    <div className="text-foreground font-semibold">{model.range}</div>
-                    <div className="text-xs text-muted">Range</div>
+                    <div className="text-foreground font-semibold text-sm">{model.range}</div>
+                    <div className="text-xs text-muted">Powertrain</div>
                   </div>
                   <div>
                     <div className="text-foreground font-semibold">{model.accel}</div>
@@ -104,7 +104,7 @@ export default function Models() {
                   </div>
                   <div>
                     <div className="text-foreground font-semibold">{model.power}</div>
-                    <div className="text-xs text-muted">Power</div>
+                    <div className="text-xs text-muted">Combined</div>
                   </div>
                 </div>
 

@@ -11,8 +11,7 @@ export default function Footer() {
               <span className="font-display text-lg font-medium">Posada</span>
             </div>
             <p className="text-sm text-muted leading-relaxed">
-              Precision. Presence. Power. The next generation of electric
-              performance.
+              V8 Hybrid Supercars. Precision. Presence. Power.
             </p>
           </div>
 
@@ -20,8 +19,8 @@ export default function Footer() {
             <h4 className="text-sm font-semibold mb-4">Models</h4>
             <ul className="space-y-3 text-sm text-muted">
               <li><a href="#models" className="hover:text-accent transition-colors">Apex</a></li>
-              <li><a href="#models" className="hover:text-accent transition-colors">Horizon</a></li>
               <li><a href="#models" className="hover:text-accent transition-colors">Pulse</a></li>
+              <li><a href="#models" className="hover:text-accent transition-colors">Horizon</a></li>
             </ul>
           </div>
 

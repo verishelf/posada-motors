@@ -37,7 +37,7 @@ export default function Hero() {
           className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass text-sm text-accent mb-8"
         >
           <Zap size={14} className="fill-accent" />
-          <span>Now accepting reservations for 2027</span>
+          <span>V8 Hybrid Supercars — 2027 Production</span>
         </motion.div>
 
         <motion.h1
@@ -57,9 +57,9 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.55 }}
           className="max-w-2xl mx-auto text-lg md:text-xl text-muted leading-relaxed mb-12"
         >
-          Posada Motors redefines electric performance. Handcrafted vehicles that
-          move with intention, feel with intelligence, and leave presence in every
-          moment.
+          Posada Motors builds V8 hybrid supercars that deliver thunderous
+          mechanical soul with instantaneous electric torque. Handcrafted
+          machines for those who demand both emotion and precision.
         </motion.p>
 
         <motion.div
@@ -89,10 +89,10 @@ export default function Hero() {
           className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
         >
           {[
-            { value: "0–60", label: "in 1.9s" },
-            { value: "620", label: "mi range" },
-            { value: "1,100", label: "hp dual motor" },
-            { value: "A.I.", label: "Drive OS" },
+            { value: "0–60", label: "in 2.1s" },
+            { value: "1,200+", label: "hp combined" },
+            { value: "V8", label: "hybrid powertrain" },
+            { value: "A.I.", label: "Chassis OS" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
               <div className="font-display text-3xl md:text-4xl font-semibold text-foreground">

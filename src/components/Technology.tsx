@@ -1,44 +1,44 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Brain, Battery, Shield, Cpu, Wind, Sparkles } from "lucide-react";
+import { Cog, BatteryCharging, Shield, Cpu, Wind, Sparkles } from "lucide-react";
 
 const features = [
   {
-    icon: Brain,
-    title: "Posada Drive OS",
+    icon: Cog,
+    title: "Twin-Turbo V8 Hybrid",
     description:
-      "A neural driving architecture that learns your patterns, predicts intent, and elevates every journey into effortless flow.",
+      "A hand-built 4.0-liter twin-turbo V8 paired with high-output electric motors delivers seamless power and an unmistakable mechanical soundtrack.",
   },
   {
-    icon: Battery,
-    title: "Solid-State Core",
+    icon: BatteryCharging,
+    title: "Intelligent Energy Recovery",
     description:
-      "Next-generation solid-state cells deliver industry-leading energy density, 15-minute ultra-fast charging, and decade-long longevity.",
+      "Advanced regenerative systems harvest energy under braking and coasting, feeding it back for launch torque and short electric-only bursts.",
   },
   {
     icon: Shield,
-    title: "Guardian Suite",
+    title: "Carbon Core Chassis",
     description:
-      "360° predictive safety with lidar-fusion, structural battery protection, and proactive intervention that feels invisible.",
+      "Monocoque carbon structure with integrated hybrid battery packaging for extreme rigidity, low weight, and exceptional safety.",
   },
   {
     icon: Cpu,
-    title: "Quantum Compute",
+    title: "Posada Chassis OS",
     description:
-      "Onboard high-performance computing powering real-time rendering, adaptive chassis, and over-the-air intelligence.",
+      "Real-time torque vectoring, adaptive damping, and predictive hybrid management that anticipates the road and the driver’s intent.",
   },
   {
     icon: Wind,
-    title: "Active Aero",
+    title: "Active Aerodynamics",
     description:
-      "Micro-actuators and continuous airflow optimization for maximum efficiency and high-speed stability.",
+      "Multi-element active aero continuously balances downforce and efficiency from city streets to high-speed circuits.",
   },
   {
     icon: Sparkles,
     title: "Sensory Cabin",
     description:
-      "Haptic surfaces, spatial audio, adaptive lighting, and materials that respond to touch and presence.",
+      "Driver-focused cockpit with haptic feedback, configurable V8 sound profiles, and materials chosen for both lightness and presence.",
   },
 ];
 
@@ -57,13 +57,13 @@ export default function Technology() {
             Technology
           </p>
           <h2 className="font-display text-4xl md:text-5xl font-semibold tracking-tight mb-6">
-            Intelligence that{" "}
-            <span className="text-accent-gradient">feels human</span>
+            Mechanical soul.{" "}
+            <span className="text-accent-gradient">Electric precision.</span>
           </h2>
           <p className="text-muted text-lg leading-relaxed">
-            Every system is designed around one principle: technology should
-            disappear into the experience. What remains is pure connection
-            between driver, machine, and road.
+            Every Posada hybrid system is engineered so the V8 remains the
+            emotional center while electric torque fills every gap — creating
+            power delivery that feels both organic and instantaneous.
           </p>
         </motion.div>
 

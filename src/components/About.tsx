@@ -38,24 +38,25 @@ export default function About() {
             </p>
             <h2 className="font-display text-4xl md:text-5xl font-semibold tracking-tight mb-6">
               Built for those who{" "}
-              <span className="text-accent-gradient">demand more</span>
+              <span className="text-accent-gradient">feel the road</span>
             </h2>
             <div className="space-y-5 text-muted leading-relaxed">
               <p>
-                Posada Motors was founded on a simple conviction: the next era
-                of mobility must be as emotionally resonant as it is
-                technologically advanced.
+                Posada Motors was founded on a clear conviction: the purest
+                driving experiences still need the soul of a great V8 — elevated
+                by the precision and instant response only hybrid technology can
+                provide.
               </p>
               <p>
-                We gather engineers, designers, and materials scientists who
-                refuse compromise. Every surface, every algorithm, every
-                decision is measured against a single standard — does this make
+                We unite engine specialists, chassis engineers, and materials
+                scientists who refuse to choose between emotion and performance.
+                Every decision is measured against one standard: does this make
                 the driver feel more alive?
               </p>
               <p>
-                From our design atelier to the advanced manufacturing campus,
-                we are crafting vehicles that will define the next decade of
-                performance luxury.
+                From our design atelier to the advanced hybrid manufacturing
+                campus, we craft limited-series V8 hybrid supercars that define
+                the next chapter of high performance.
               </p>
             </div>
           </motion.div>
