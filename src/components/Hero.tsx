@@ -10,21 +10,21 @@ export default function Hero() {
       <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-black to-transparent z-10" />
       
       <div
-        className="absolute inset-0 opacity-[0.04]"
+        className="absolute inset-0 opacity-[0.035]"
         style={{
-          backgroundImage: `linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px)`,
-          backgroundSize: "80px 80px",
+          backgroundImage: `linear-gradient(rgba(255,255,255,0.12) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.12) 1px, transparent 1px)`,
+          backgroundSize: "72px 72px",
         }}
       />
 
       <motion.div
-        animate={{ y: [0, -25, 0], opacity: [0.15, 0.28, 0.15] }}
+        animate={{ y: [0, -25, 0], opacity: [0.12, 0.25, 0.12] }}
         transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
         className="absolute top-1/4 left-1/5 w-80 h-80 rounded-full bg-white/10 blur-[120px]"
       />
       <motion.div
-        animate={{ y: [0, 35, 0], opacity: [0.1, 0.2, 0.1] }}
+        animate={{ y: [0, 35, 0], opacity: [0.08, 0.18, 0.08] }}
         transition={{ duration: 11, repeat: Infinity, ease: "easeInOut", delay: 1.2 }}
         className="absolute bottom-1/3 right-1/5 w-[28rem] h-[28rem] rounded-full bg-white/8 blur-[140px]"
       />
@@ -34,9 +34,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-none border border-white/20 bg-black/60 text-sm text-white mb-8 tracking-widest uppercase"
+          className="chip inline-flex items-center gap-2 text-white mb-8"
         >
-          <Zap size={14} className="fill-white" />
+          <Zap size={13} className="fill-white" />
           <span>V8 Hybrid Supercars — 2027</span>
         </motion.div>
 
@@ -70,13 +70,13 @@ export default function Hero() {
         >
           <a
             href="#models"
-            className="btn-shine px-10 py-4 bg-white text-black font-semibold text-base tracking-wide uppercase hover:bg-neutral-200 transition-all glow"
+            className="btn-shine px-9 py-3.5 rounded-full bg-white text-black font-semibold text-sm tracking-wide hover:bg-neutral-200 transition-all glow"
           >
             Explore Models
           </a>
           <a
             href="#experience"
-            className="px-10 py-4 border border-white/30 text-white font-medium text-base tracking-wide uppercase hover:border-white hover:bg-white/5 transition-all"
+            className="px-9 py-3.5 rounded-full border border-white/25 text-white font-medium text-sm tracking-wide hover:border-white/50 hover:bg-white/5 transition-all"
           >
             Watch Film
           </a>
@@ -86,19 +86,20 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1 }}
-          className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto border-t border-white/10 pt-12"
+          className="mt-20 flex flex-wrap items-center justify-center gap-3 max-w-3xl mx-auto"
         >
           {[
-            { value: "0–60", label: "in 2.1s" },
-            { value: "1,200+", label: "hp combined" },
-            { value: "V8", label: "hybrid powertrain" },
+            { value: "0–60", label: "2.1s" },
+            { value: "1,200+", label: "hp" },
+            { value: "V8", label: "Hybrid" },
             { value: "A.I.", label: "Chassis OS" },
           ].map((stat) => (
-            <div key={stat.label} className="text-center">
-              <div className="font-display text-3xl md:text-4xl font-semibold text-white">
-                {stat.value}
-              </div>
-              <div className="text-xs uppercase tracking-widest text-muted mt-2">{stat.label}</div>
+            <div
+              key={stat.label}
+              className="chip px-5 py-2.5 gap-2"
+            >
+              <span className="font-display text-base font-semibold text-white">{stat.value}</span>
+              <span className="text-muted text-xs">{stat.label}</span>
             </div>
           ))}
         </motion.div>

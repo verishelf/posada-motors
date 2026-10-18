@@ -53,12 +53,10 @@ export default function Models() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7 }}
-          className="text-center mb-20"
+          className="text-center mb-16"
         >
-          <p className="text-white/50 text-xs font-medium tracking-[0.25em] uppercase mb-4">
-            The Collection
-          </p>
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight">
+          <span className="chip mb-5">The Collection</span>
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight mt-4">
             Three expressions of{" "}
             <span className="text-white">V8 hybrid power</span>
           </h2>
@@ -72,51 +70,46 @@ export default function Models() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: i * 0.12 }}
-              className="car-card group relative overflow-hidden bg-surface"
+              className="car-card group relative bg-surface"
             >
               <div
-                className={`h-56 bg-gradient-to-br ${model.gradient} relative flex items-end p-6`}
+                className={`h-52 bg-gradient-to-br ${model.gradient} relative flex items-end p-6 rounded-t-[1.75rem]`}
               >
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(255,255,255,0.08),transparent_55%)]" />
-                <div className="absolute top-0 right-0 w-24 h-24 bg-white/5" style={{ clipPath: "polygon(100% 0, 0 0, 100% 100%)" }} />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(255,255,255,0.07),transparent_55%)] rounded-t-[1.75rem]" />
                 <div className="relative z-10">
-                  <p className="text-[10px] uppercase tracking-[0.2em] text-white/50 mb-1">
-                    {model.tagline}
-                  </p>
-                  <h3 className="font-display text-3xl font-semibold text-white tracking-tight">
+                  <span className="chip text-[10px] mb-2 opacity-80">{model.tagline}</span>
+                  <h3 className="font-display text-3xl font-semibold text-white tracking-tight mt-1">
                     {model.name}
                   </h3>
                 </div>
               </div>
 
-              <div className="p-6 space-y-5 border-t border-white/10">
+              <div className="p-6 space-y-5">
                 <p className="text-muted text-sm leading-relaxed">
                   {model.description}
                 </p>
 
-                <div className="grid grid-cols-3 gap-3 text-center border-y border-white/8 py-4">
-                  <div>
-                    <div className="text-white font-semibold text-sm">{model.range}</div>
-                    <div className="text-[10px] uppercase tracking-wider text-muted mt-1">Powertrain</div>
-                  </div>
-                  <div>
-                    <div className="text-white font-semibold">{model.accel}</div>
-                    <div className="text-[10px] uppercase tracking-wider text-muted mt-1">0–60</div>
-                  </div>
-                  <div>
-                    <div className="text-white font-semibold">{model.power}</div>
-                    <div className="text-[10px] uppercase tracking-wider text-muted mt-1">Combined</div>
-                  </div>
+                <div className="flex flex-wrap gap-2">
+                  <span className="chip text-[11px]">
+                    <span className="text-white font-medium">{model.range}</span>
+                  </span>
+                  <span className="chip text-[11px]">
+                    <span className="text-white font-medium">{model.accel}</span>
+                    <span className="text-muted">0–60</span>
+                  </span>
+                  <span className="chip text-[11px]">
+                    <span className="text-white font-medium">{model.power}</span>
+                  </span>
                 </div>
 
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between pt-1">
                   <span className="text-sm text-muted">{model.price}</span>
                   <a
                     href={`#${model.id}`}
-                    className="inline-flex items-center gap-2 text-sm font-medium text-white uppercase tracking-wider group-hover:gap-3 transition-all"
+                    className="inline-flex items-center gap-1.5 text-sm font-medium text-white rounded-full px-3 py-1.5 hover:bg-white/10 transition-all group-hover:gap-2.5"
                   >
                     Explore
-                    <ArrowRight size={16} />
+                    <ArrowRight size={15} />
                   </a>
                 </div>
               </div>

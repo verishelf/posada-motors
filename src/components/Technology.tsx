@@ -51,12 +51,10 @@ export default function Technology() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="max-w-3xl mb-20"
+          className="max-w-3xl mb-16"
         >
-          <p className="text-white/50 text-xs font-medium tracking-[0.25em] uppercase mb-4">
-            Technology
-          </p>
-          <h2 className="font-display text-4xl md:text-5xl font-semibold tracking-tight mb-6">
+          <span className="chip mb-5">Technology</span>
+          <h2 className="font-display text-4xl md:text-5xl font-semibold tracking-tight mb-6 mt-4">
             Mechanical soul.{" "}
             <span className="text-white">Electric precision.</span>
           </h2>
@@ -75,9 +73,9 @@ export default function Technology() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="group p-7 bg-surface border border-white/8 hover:border-white/25 transition-all duration-400"
+              className="group p-7 rounded-3xl bg-surface border border-white/8 hover:border-white/20 transition-all duration-400"
             >
-              <div className="w-11 h-11 border border-white/20 flex items-center justify-center mb-5 group-hover:bg-white group-hover:border-white transition-colors">
+              <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-5 group-hover:bg-white group-hover:border-white transition-colors">
                 <feature.icon className="text-white group-hover:text-black transition-colors" size={20} />
               </div>
               <h3 className="font-display text-xl font-medium mb-3 tracking-tight">

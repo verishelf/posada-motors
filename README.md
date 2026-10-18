@@ -6,13 +6,13 @@ Official website for **Posada Motors** — V8 hybrid supercars.
 
 ## Theme
 
-**Black & White · Lamborghini-inspired**
+**Black & White · Rounded cards & chips**
 
-- Pure black backgrounds, pure white text & accents
-- High-contrast, aggressive geometry
-- Sharp edges, angular details, bold uppercase tracking
-- Dramatic film-grain noise and radial lighting
-- No color — only monochrome intensity
+- Pure black backgrounds, pure white accents
+- Soft rounded cards (`rounded-3xl`) and pill chips
+- Floating glass navbar with rounded container
+- Chip-style stats, tags, and section labels
+- Soft hover lifts and glow on interactive elements
 
 ## Brand Focus
 
