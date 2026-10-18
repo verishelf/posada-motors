@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <section id="about" className="relative py-32">
+    <section id="about" className="relative py-32 bg-black">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <motion.div
@@ -13,14 +13,14 @@ export default function About() {
             viewport={{ once: true }}
             className="order-2 lg:order-1"
           >
-            <div className="aspect-square rounded-3xl glass overflow-hidden relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 via-transparent to-purple-600/20" />
+            <div className="aspect-square overflow-hidden relative bg-surface border border-white/10">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.06),transparent_65%)]" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center p-8">
-                  <div className="font-display text-7xl md:text-8xl font-semibold text-gradient mb-2">
+                  <div className="font-display text-7xl md:text-8xl font-semibold text-white mb-2 tracking-tight">
                     2027
                   </div>
-                  <p className="text-muted text-lg">First deliveries</p>
+                  <p className="text-muted text-sm uppercase tracking-[0.2em]">First deliveries</p>
                 </div>
               </div>
             </div>
@@ -33,12 +33,12 @@ export default function About() {
             transition={{ delay: 0.15 }}
             className="order-1 lg:order-2"
           >
-            <p className="text-accent text-sm font-medium tracking-widest uppercase mb-4">
+            <p className="text-white/50 text-xs font-medium tracking-[0.25em] uppercase mb-4">
               Our Story
             </p>
             <h2 className="font-display text-4xl md:text-5xl font-semibold tracking-tight mb-6">
               Built for those who{" "}
-              <span className="text-accent-gradient">feel the road</span>
+              <span className="text-white">feel the road</span>
             </h2>
             <div className="space-y-5 text-muted leading-relaxed">
               <p>

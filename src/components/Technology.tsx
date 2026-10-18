@@ -44,7 +44,7 @@ const features = [
 
 export default function Technology() {
   return (
-    <section id="technology" className="relative py-32">
+    <section id="technology" className="relative py-32 bg-black">
       <div className="mx-auto max-w-7xl px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -53,12 +53,12 @@ export default function Technology() {
           transition={{ duration: 0.7 }}
           className="max-w-3xl mb-20"
         >
-          <p className="text-accent text-sm font-medium tracking-widest uppercase mb-4">
+          <p className="text-white/50 text-xs font-medium tracking-[0.25em] uppercase mb-4">
             Technology
           </p>
           <h2 className="font-display text-4xl md:text-5xl font-semibold tracking-tight mb-6">
             Mechanical soul.{" "}
-            <span className="text-accent-gradient">Electric precision.</span>
+            <span className="text-white">Electric precision.</span>
           </h2>
           <p className="text-muted text-lg leading-relaxed">
             Every Posada hybrid system is engineered so the V8 remains the
@@ -67,7 +67,7 @@ export default function Technology() {
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {features.map((feature, i) => (
             <motion.div
               key={feature.title}
@@ -75,12 +75,12 @@ export default function Technology() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="group p-7 rounded-2xl glass hover:border-accent/30 transition-all duration-400"
+              className="group p-7 bg-surface border border-white/8 hover:border-white/25 transition-all duration-400"
             >
-              <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-5 group-hover:bg-accent/20 transition-colors">
-                <feature.icon className="text-accent" size={22} />
+              <div className="w-11 h-11 border border-white/20 flex items-center justify-center mb-5 group-hover:bg-white group-hover:border-white transition-colors">
+                <feature.icon className="text-white group-hover:text-black transition-colors" size={20} />
               </div>
-              <h3 className="font-display text-xl font-medium mb-3">
+              <h3 className="font-display text-xl font-medium mb-3 tracking-tight">
                 {feature.title}
               </h3>
               <p className="text-muted text-sm leading-relaxed">
