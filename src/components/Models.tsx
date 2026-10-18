@@ -13,8 +13,7 @@ const models = [
     accel: "2.1s",
     power: "1,250 hp",
     price: "From $285,000",
-    image:
-      "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=1200&q=80",
+    image: "/models/apex.jpg",
     description:
       "The ultimate expression of Posada. Twin-turbo 4.0L V8 mated to high-output electric motors. Effortless continent-crossing speed with visceral soundtrack.",
   },
@@ -26,8 +25,7 @@ const models = [
     accel: "1.9s",
     power: "1,480 hp",
     price: "From $365,000",
-    image:
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80",
+    image: "/models/pulse.jpg",
     description:
       "Carbon-intensive architecture, active aero, and a hybrid system tuned for maximum lap times. Pure kinetic art for the dedicated driver.",
   },
@@ -39,8 +37,7 @@ const models = [
     accel: "2.4s",
     power: "1,180 hp",
     price: "From $315,000",
-    image:
-      "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=80",
+    image: "/models/horizon.jpg",
     description:
       "Roadster freedom with supercar performance. Retractable hardtop, adaptive chassis, and the same V8 hybrid heart — refined for open skies.",
   },
@@ -81,11 +78,11 @@ export default function Models() {
                   src={model.image}
                   alt={`Posada ${model.name}`}
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 33vw"
                   priority={i === 0}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-5">
                   <span className="chip text-[10px] mb-1.5 opacity-90">
                     {model.tagline}

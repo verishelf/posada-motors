@@ -51,7 +51,7 @@ export default function Experience() {
             className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-surface border border-white/10 group cursor-pointer"
           >
             <Image
-              src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1400&q=80"
+              src="/models/pulse.jpg"
               alt="Posada supercar film"
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-105"
