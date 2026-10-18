@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Play } from "lucide-react";
+import Image from "next/image";
 
 export default function Experience() {
   return (
@@ -49,15 +50,17 @@ export default function Experience() {
             transition={{ duration: 0.8 }}
             className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-surface border border-white/10 group cursor-pointer"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-neutral-800 via-black to-neutral-950" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.06),transparent_60%)]" />
+            <Image
+              src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1400&q=80"
+              alt="Posada supercar film"
+              fill
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/10" />
             
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-3/4 h-1/3 bg-gradient-to-r from-transparent via-white/10 to-transparent blur-sm" />
-            </div>
-            
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-18 h-18 w-[4.5rem] h-[4.5rem] rounded-full border border-white/25 flex items-center justify-center group-hover:bg-white group-hover:border-white transition-all duration-400">
+              <div className="w-[4.5rem] h-[4.5rem] rounded-full border border-white/30 bg-black/40 backdrop-blur-sm flex items-center justify-center group-hover:bg-white group-hover:border-white transition-all duration-400">
                 <Play className="text-white group-hover:text-black fill-current ml-0.5 transition-colors" size={24} />
               </div>
             </div>
