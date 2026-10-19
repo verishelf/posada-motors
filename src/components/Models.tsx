@@ -18,8 +18,8 @@ export default function Models() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.7 }}
+          viewport={{ once: true, amount: 0.15, margin: "0px 0px -40px 0px" }}
+          transition={{ duration: 0.45 }}
           className="text-center mb-16"
         >
           <span className="chip mb-5">The Collection</span>
@@ -35,8 +35,8 @@ export default function Models() {
               key={model.id}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6, delay: i * 0.12 }}
+              viewport={{ once: true, amount: 0.1, margin: "0px 0px -20px 0px" }}
+              transition={{ duration: 0.4, delay: i * 0.06 }}
               className="car-card group relative bg-surface cursor-pointer"
               onClick={() => router.push(`/models/${model.id}`)}
               role="link"
