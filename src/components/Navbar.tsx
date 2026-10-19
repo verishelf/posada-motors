@@ -27,23 +27,43 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (open) {
+      const prev = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
+      return () => {
+        document.body.style.overflow = prev;
+      };
+    }
+  }, [open]);
+
+  // Close menu on route change
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
+  const close = () => setOpen(false);
+  const toggle = () => setOpen((v) => !v);
+
   return (
     <>
-      <motion.header
-        initial={{ y: -100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled ? "py-3" : "py-5 bg-transparent"
+      <header
+        className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
+          scrolled ? "py-2" : "py-4 bg-transparent"
         }`}
       >
         <div
           className={`mx-auto max-w-7xl px-4 sm:px-6 ${
-            scrolled ? "glass-strong rounded-2xl mx-4 sm:mx-6 mt-2" : ""
+            scrolled ? "glass-strong rounded-2xl mx-3 sm:mx-6 mt-1" : ""
           }`}
         >
           <div className="flex items-center justify-between py-2 px-2 sm:px-4">
-            <Link href="/" className="flex items-center gap-2.5 group">
+            <Link
+              href="/"
+              onClick={close}
+              className="flex items-center gap-2.5 group relative z-[110]"
+            >
               <div className="w-9 h-9 rounded-full bg-white flex items-center justify-center">
                 <span className="font-display font-bold text-black text-lg leading-none">
                   P
@@ -83,43 +103,66 @@ export default function Navbar() {
 
             <button
               type="button"
-              className="md:hidden p-2 rounded-full hover:bg-white/10 transition-colors"
-              onClick={() => setOpen(!open)}
-              aria-label="Menu"
+              className="md:hidden relative z-[110] p-2.5 rounded-full text-white hover:bg-white/10 active:bg-white/15 transition-colors touch-manipulation"
+              onClick={toggle}
+              aria-label={open ? "Close menu" : "Open menu"}
+              aria-expanded={open}
+              aria-controls="mobile-menu"
             >
-              {open ? <X size={22} /> : <Menu size={22} />}
+              {open ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
-      </motion.header>
+      </header>
 
       <AnimatePresence>
         {open && (
           <motion.div
+            id="mobile-menu"
+            key="mobile-menu"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-40 bg-black/95 backdrop-blur-xl pt-24 px-6 md:hidden"
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 z-[90] md:hidden bg-black"
+            role="dialog"
+            aria-modal="true"
           >
-            <nav className="flex flex-col gap-2">
-              {sections.map((s) => (
-                <Link
-                  key={s.id}
-                  href={href(s.id)}
-                  onClick={() => setOpen(false)}
-                  className="text-2xl font-display font-medium text-white py-3 px-4 rounded-2xl hover:bg-white/5 transition-colors"
-                >
-                  {s.label}
-                </Link>
-              ))}
-              <Link
-                href={href("models")}
-                onClick={() => setOpen(false)}
-                className="mt-6 mx-4 py-3.5 rounded-full bg-white text-black text-center font-semibold"
+            <div className="flex flex-col h-full pt-24 pb-10 px-6 overflow-y-auto">
+              <nav className="flex flex-col gap-1">
+                {sections.map((s, i) => (
+                  <motion.div
+                    key={s.id}
+                    initial={{ opacity: 0, x: -12 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.05 + i * 0.04, duration: 0.25 }}
+                  >
+                    <Link
+                      href={href(s.id)}
+                      onClick={close}
+                      className="block text-2xl font-display font-medium text-white py-3.5 px-4 rounded-2xl active:bg-white/10 transition-colors"
+                    >
+                      {s.label}
+                    </Link>
+                  </motion.div>
+                ))}
+              </nav>
+
+              <motion.div
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.25, duration: 0.25 }}
+                className="mt-auto pt-8"
               >
-                Reserve Now
-              </Link>
-            </nav>
+                <Link
+                  href={href("models")}
+                  onClick={close}
+                  className="block w-full py-4 rounded-full bg-white text-black text-center font-semibold text-base active:bg-neutral-200"
+                >
+                  Reserve Now
+                </Link>
+              </motion.div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
