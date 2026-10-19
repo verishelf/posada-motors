@@ -37,7 +37,7 @@ export const models: Model[] = [
       "The ultimate expression of Posada. Twin-turbo 4.0L V8 mated to high-output electric motors. Effortless continent-crossing speed with visceral soundtrack.",
     longDescription:
       "Apex is built for the driver who refuses to choose between grand-touring refinement and supercar intensity. A twin-turbo 4.0-liter V8 works in concert with dual high-output electric motors to deliver seamless thrust, instant response, and a soundtrack that remains unmistakably mechanical. Adaptive air suspension, active aero, and a carbon-intensive structure keep the car composed from coastal highways to mountain passes.",
-    image: "/models/apex.jpg",
+    image: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=1600&q=80",
     price: "From $285,000",
     specs: [
       { label: "Powertrain", value: "Twin-turbo 4.0L V8 + dual e-motors" },
@@ -89,7 +89,7 @@ export const models: Model[] = [
       "Carbon-intensive architecture, active aero, and a hybrid system tuned for maximum lap times. Pure kinetic art for the dedicated driver.",
     longDescription:
       "Pulse is Posada’s most extreme expression. Every surface, every calibration, and every kilogram exists in service of lap time and driver connection. A higher-output hybrid system, aggressive active aero including a large fixed rear wing option, and a motorsport-derived chassis deliver 1,480 hp with ruthless precision. Built for the track — yet fully homologated for the road.",
-    image: "/models/pulse.jpg",
+    image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80",
     price: "From $365,000",
     specs: [
       { label: "Powertrain", value: "Twin-turbo 4.0L V8 + dual e-motors" },
@@ -141,7 +141,7 @@ export const models: Model[] = [
       "Roadster freedom with supercar performance. Retractable hardtop, adaptive chassis, and the same V8 hybrid heart — refined for open skies.",
     longDescription:
       "Horizon brings Posada’s hybrid V8 character into the open air. A lightweight retractable hardtop transforms the cabin in seconds, while structural reinforcements and adaptive chassis tuning preserve the precision and composure of the closed cars. With 1,180 hp and a more relaxed grand-touring bias, Horizon is the Posada for coastal roads, mountain passes, and nights when the roof stays down.",
-    image: "/models/horizon.jpg",
+    image: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1600&q=80",
     price: "From $315,000",
     specs: [
       { label: "Powertrain", value: "Twin-turbo 4.0L V8 + dual e-motors" },
