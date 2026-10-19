@@ -33,7 +33,7 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.6, delay: 0.05 }}
           className="chip inline-flex items-center gap-2 text-white mb-8"
         >
           <Zap size={13} className="fill-white" />
@@ -43,7 +43,7 @@ export default function Hero() {
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.7, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
           className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold tracking-tight leading-[1.02] mb-6"
         >
           <span className="block">Precision.</span>
@@ -54,7 +54,7 @@ export default function Hero() {
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.55 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
           className="max-w-2xl mx-auto text-lg md:text-xl text-muted leading-relaxed mb-12"
         >
           Posada Motors builds V8 hybrid supercars that deliver thunderous
@@ -65,7 +65,7 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.7 }}
+          transition={{ duration: 0.5, delay: 0.28 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <a
@@ -85,7 +85,7 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-20 flex flex-wrap items-center justify-center gap-3 max-w-3xl mx-auto"
         >
           {[
@@ -109,7 +109,7 @@ export default function Hero() {
         href="#models"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.4 }}
+        transition={{ delay: 0.55 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 text-muted hover:text-white transition-colors"
       >
         <ChevronDown className="animate-bounce" size={28} />
