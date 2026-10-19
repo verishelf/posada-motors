@@ -14,8 +14,8 @@ export default function Experience() {
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            viewport={{ once: true, amount: 0.15 }}
+            transition={{ duration: 0.45 }}
           >
             <span className="chip mb-5">Experience</span>
             <h2 className="font-display text-4xl md:text-5xl font-semibold tracking-tight mb-6 mt-4">
@@ -46,12 +46,12 @@ export default function Experience() {
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            viewport={{ once: true, amount: 0.15 }}
+            transition={{ duration: 0.45 }}
             className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-surface border border-white/10 group cursor-pointer"
           >
             <Image
-              src="/models/pulse.jpg"
+              src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1400&q=80"
               alt="Posada supercar film"
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-105"

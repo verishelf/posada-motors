@@ -49,8 +49,8 @@ export default function Technology() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+          viewport={{ once: true, amount: 0.15 }}
+          transition={{ duration: 0.45 }}
           className="max-w-3xl mb-16"
         >
           <span className="chip mb-5">Technology</span>
@@ -71,8 +71,8 @@ export default function Technology() {
               key={feature.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.35, delay: i * 0.05 }}
               className="group p-7 rounded-3xl bg-surface border border-white/8 hover:border-white/20 transition-all duration-400"
             >
               <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-5 group-hover:bg-white group-hover:border-white transition-colors">

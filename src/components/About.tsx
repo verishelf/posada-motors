@@ -10,7 +10,8 @@ export default function About() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.15 }}
+            transition={{ duration: 0.4 }}
             className="order-2 lg:order-1"
           >
             <div className="aspect-square rounded-3xl overflow-hidden relative bg-surface border border-white/10">
@@ -29,8 +30,8 @@ export default function About() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.15 }}
+            viewport={{ once: true, amount: 0.15 }}
+            transition={{ duration: 0.4, delay: 0.05 }}
             className="order-1 lg:order-2"
           >
             <span className="chip mb-5">Our Story</span>
@@ -53,8 +54,8 @@ export default function About() {
               </p>
               <p>
                 From our design atelier to the advanced hybrid manufacturing
-                campus, we craft limited-series V8 hybrid supercars that define
-                the next chapter of high performance.
+                line, Posada exists to build machines that reward every mile
+                with presence, power, and precision.
               </p>
             </div>
           </motion.div>
