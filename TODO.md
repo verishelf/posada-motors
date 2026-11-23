@@ -7,4 +7,6 @@
 - [ ] Bring `/models/:slug` detail pages into the same visual language without breaking static generation or model navigation.
 - [ ] Keep the site responsive across desktop and mobile layouts, including the mobile menu.
 - [ ] Serve `public/manus-routes.json` with the home and dynamic model route declarations.
+- [ ] Add a responsive `/suppliers` supplier dashboard prototype with supplier KPIs, onboarding progress, program allocation, compliance pulse, searchable/filterable supplier directory, recent activity, and launch readiness.
+  - This first version is front-end only with realistic mock data; authentication, persistence, and backend workflows remain future work.
 - [ ] Pass lint and production build, then commit and push the redesign to `origin/main`.

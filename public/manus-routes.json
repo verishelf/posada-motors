@@ -1,1 +1,1 @@
-{"routes":[{"path":"/","title":"Posada Motors"},{"path":"/models/:slug","title":"Posada model"}]}
+{"routes":[{"path":"/","title":"Posada Motors"},{"path":"/models/:slug","title":"Posada model"},{"path":"/suppliers","title":"Supplier hub"}]}
