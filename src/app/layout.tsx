@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import { Playfair_Display } from "next/font/google";
+import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -20,20 +19,19 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Posada Motors | V8 Hybrid Supercars",
+  title: "Posada Motors | Built for the long way",
   description:
-    "Posada Motors crafts V8 hybrid supercars that unite mechanical soul with electric precision. Apex, Pulse, and Horizon — precision, presence, power.",
+    "Posada Motors crafts V8 hybrid machines for the long way home — quiet when you need it, alive whenever the road opens up.",
   keywords: [
-    "V8 hybrid supercars",
-    "hybrid supercar",
     "Posada Motors",
-    "performance hybrid",
-    "twin-turbo V8",
-    "luxury supercar",
+    "V8 hybrid",
+    "luxury performance vehicle",
+    "all-terrain performance",
+    "hybrid grand touring",
   ],
   openGraph: {
-    title: "Posada Motors — V8 Hybrid Supercars",
-    description: "Precision. Presence. Power.",
+    title: "Posada Motors — Built for the long way",
+    description: "Go further. Stay with the feeling.",
     type: "website",
   },
 };
@@ -44,13 +42,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col bg-background text-foreground">
-        {children}
-      </body>
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} h-full antialiased`}>
+      <body className="min-h-full bg-background text-foreground">{children}</body>
     </html>
   );
 }

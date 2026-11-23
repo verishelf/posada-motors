@@ -1,16 +1,16 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { ArrowUpRight, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const sections = [
-  { id: "models", label: "Models" },
-  { id: "technology", label: "Technology" },
-  { id: "experience", label: "Experience" },
-  { id: "about", label: "About" },
+  { id: "models", label: "The range" },
+  { id: "technology", label: "Engineering" },
+  { id: "experience", label: "The way" },
+  { id: "about", label: "Our story" },
 ];
 
 export default function Navbar() {
@@ -22,94 +22,75 @@ export default function Navbar() {
   const href = (id: string) => (isHome ? `#${id}` : `/#${id}`);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
+    const onScroll = () => setScrolled(window.scrollY > 28);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Lock body scroll when mobile menu is open
   useEffect(() => {
-    if (open) {
-      const prev = document.body.style.overflow;
-      document.body.style.overflow = "hidden";
-      return () => {
-        document.body.style.overflow = prev;
-      };
-    }
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [open]);
-
-  // Close menu on route change
-  useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
-
-  const close = () => setOpen(false);
-  const toggle = () => setOpen((v) => !v);
 
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
-          scrolled ? "py-2" : "py-4 bg-transparent"
+        className={`fixed inset-x-0 top-0 z-[100] px-4 pt-4 transition-all duration-300 sm:px-6 ${
+          scrolled ? "pt-3" : ""
         }`}
       >
         <div
-          className={`mx-auto max-w-7xl px-4 sm:px-6 ${
-            scrolled ? "glass-strong rounded-2xl mx-3 sm:mx-6 mt-1" : ""
+          className={`mx-auto max-w-[80rem] border border-transparent transition-all duration-300 ${
+            scrolled
+              ? "rounded-xl border-white/15 bg-peat-deep/90 px-2 shadow-2xl shadow-black/20 backdrop-blur-xl sm:px-3"
+              : ""
           }`}
         >
-          <div className="flex items-center justify-between py-2 px-2 sm:px-4">
-            <Link
-              href="/"
-              onClick={close}
-              className="flex items-center gap-2.5 group relative z-[110]"
-            >
-              <div className="w-9 h-9 rounded-full bg-white flex items-center justify-center">
-                <span className="font-display font-bold text-black text-lg leading-none">
-                  P
-                </span>
-              </div>
-              <span className="font-display text-xl tracking-tight font-medium text-white group-hover:opacity-80 transition-opacity">
-                Posada
+          <div className="flex items-center justify-between py-2">
+            <Link href="/" onClick={() => setOpen(false)} className="brand-lockup group">
+              <span className="brand-mark">P</span>
+              <span>
+                <small>Est. 2026</small>
+                <strong className="group-hover:text-sand transition-colors">Posada</strong>
               </span>
             </Link>
 
-            <nav className="hidden md:flex items-center gap-1">
-              {sections.map((s) => (
+            <nav className="hidden items-center gap-1 lg:flex">
+              {sections.map((section) => (
                 <Link
-                  key={s.id}
-                  href={href(s.id)}
-                  className="px-4 py-2 rounded-full text-sm font-medium text-white/60 hover:text-white hover:bg-white/8 transition-all"
+                  key={section.id}
+                  href={href(section.id)}
+                  className="rounded-md px-3 py-2 text-[0.69rem] font-medium uppercase tracking-[0.12em] text-mineral/65 transition-colors hover:bg-white/8 hover:text-sand"
                 >
-                  {s.label}
+                  {section.label}
                 </Link>
               ))}
             </nav>
 
-            <div className="hidden md:flex items-center gap-3">
+            <div className="hidden items-center gap-3 md:flex">
               <Link
                 href={href("experience")}
-                className="px-4 py-2 rounded-full text-sm font-medium text-white/60 hover:text-white hover:bg-white/8 transition-all"
+                className="text-[0.68rem] font-semibold uppercase tracking-[0.13em] text-mineral/65 transition-colors hover:text-sand"
               >
-                Configure
+                Find your way
               </Link>
-              <Link
-                href={href("models")}
-                className="btn-shine px-5 py-2.5 rounded-full bg-white text-black text-sm font-semibold hover:bg-neutral-200 transition-colors"
-              >
-                Reserve
+              <Link href={href("experience")} className="btn-primary min-h-0 px-4 py-2.5">
+                Build yours
+                <ArrowUpRight size={14} />
               </Link>
             </div>
 
             <button
               type="button"
-              className="md:hidden relative z-[110] p-2.5 rounded-full text-white hover:bg-white/10 active:bg-white/15 transition-colors touch-manipulation"
-              onClick={toggle}
+              className="rounded-md p-2 text-mineral transition-colors hover:bg-white/10 md:hidden"
+              onClick={() => setOpen((value) => !value)}
               aria-label={open ? "Close menu" : "Open menu"}
               aria-expanded={open}
               aria-controls="mobile-menu"
             >
-              {open ? <X size={24} /> : <Menu size={24} />}
+              {open ? <X size={23} /> : <Menu size={23} />}
             </button>
           </div>
         </div>
@@ -123,45 +104,38 @@ export default function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-[90] md:hidden bg-black"
+            className="fixed inset-0 z-[90] bg-peat-deep px-6 pb-8 pt-28 md:hidden"
             role="dialog"
             aria-modal="true"
           >
-            <div className="flex flex-col h-full pt-24 pb-10 px-6 overflow-y-auto">
-              <nav className="flex flex-col gap-1">
-                {sections.map((s, i) => (
+            <div className="flex h-full flex-col">
+              <div className="eyebrow mb-8">Posada / Field notes 01</div>
+              <nav className="flex flex-col">
+                {sections.map((section, index) => (
                   <motion.div
-                    key={s.id}
-                    initial={{ opacity: 0, x: -12 }}
+                    key={section.id}
+                    initial={{ opacity: 0, x: -18 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.05 + i * 0.04, duration: 0.25 }}
+                    transition={{ delay: 0.06 + index * 0.05 }}
+                    className="border-b border-white/12"
                   >
                     <Link
-                      href={href(s.id)}
-                      onClick={close}
-                      className="block text-2xl font-display font-medium text-white py-3.5 px-4 rounded-2xl active:bg-white/10 transition-colors"
+                      href={href(section.id)}
+                      onClick={() => setOpen(false)}
+                      className="flex items-center justify-between py-5 font-display text-3xl text-mineral"
                     >
-                      {s.label}
+                      {section.label}
+                      <ArrowUpRight className="text-terracotta" size={20} />
                     </Link>
                   </motion.div>
                 ))}
               </nav>
-
-              <motion.div
-                initial={{ opacity: 0, y: 8 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.25, duration: 0.25 }}
-                className="mt-auto pt-8"
-              >
-                <Link
-                  href={href("models")}
-                  onClick={close}
-                  className="block w-full py-4 rounded-full bg-white text-black text-center font-semibold text-base active:bg-neutral-200"
-                >
-                  Reserve Now
+              <div className="mt-auto">
+                <Link href={href("experience")} onClick={() => setOpen(false)} className="btn-primary w-full">
+                  Build your Posada
+                  <ArrowUpRight size={16} />
                 </Link>
-              </motion.div>
+              </div>
             </div>
           </motion.div>
         )}

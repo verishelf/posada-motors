@@ -1,89 +1,86 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Cog, BatteryCharging, Shield, Cpu, Wind, Sparkles } from "lucide-react";
+import { ArrowUpRight, BatteryCharging, Cog, Cpu, Shield, Sparkles, Wind } from "lucide-react";
 
 const features = [
   {
     icon: Cog,
-    title: "Twin-Turbo V8 Hybrid",
-    description:
-      "A hand-built 4.0-liter twin-turbo V8 paired with high-output electric motors delivers seamless power and an unmistakable mechanical soundtrack.",
+    title: "Twin-turbo V8 hybrid",
+    description: "A hand-built 4.0-liter V8 keeps the mechanical soul intact while electric motors add instant, intelligent torque.",
   },
   {
     icon: BatteryCharging,
-    title: "Intelligent Energy Recovery",
-    description:
-      "Advanced regenerative systems harvest energy under braking and coasting, feeding it back for launch torque and short electric-only bursts.",
+    title: "Energy, returned",
+    description: "Regenerative systems turn braking and coasting into forward momentum, ready for the next opening in the road.",
   },
   {
     icon: Shield,
-    title: "Carbon Core Chassis",
-    description:
-      "Monocoque carbon structure with integrated hybrid battery packaging for extreme rigidity, low weight, and exceptional safety.",
+    title: "Carbon core chassis",
+    description: "A rigid, light structure with integrated battery packaging keeps every response precise and every mile composed.",
   },
   {
     icon: Cpu,
-    title: "Posada Chassis OS",
-    description:
-      "Real-time torque vectoring, adaptive damping, and predictive hybrid management that anticipates the road and the driver’s intent.",
+    title: "Posada chassis OS",
+    description: "Torque vectoring, adaptive damping, and predictive hybrid management read the road before you do.",
   },
   {
     icon: Wind,
-    title: "Active Aerodynamics",
-    description:
-      "Multi-element active aero continuously balances downforce and efficiency from city streets to high-speed circuits.",
+    title: "Active aerodynamics",
+    description: "The shape changes with the conditions — balancing stability, efficiency, and a sense of effortless speed.",
   },
   {
     icon: Sparkles,
-    title: "Sensory Cabin",
-    description:
-      "Driver-focused cockpit with haptic feedback, configurable V8 sound profiles, and materials chosen for both lightness and presence.",
+    title: "A considered cabin",
+    description: "Materials chosen for touch and time, with a driver-focused interface that disappears when the road takes over.",
   },
 ];
 
 export default function Technology() {
   return (
-    <section id="technology" className="relative py-32 bg-black">
-      <div className="mx-auto max-w-7xl px-6">
+    <section id="technology" className="tech-band py-24 md:py-36">
+      <div className="section-wrap">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.15 }}
-          transition={{ duration: 0.45 }}
-          className="max-w-3xl mb-16"
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.55 }}
+          className="grid gap-9 pb-14 md:grid-cols-[0.72fr_1fr] md:items-end md:pb-20"
         >
-          <span className="chip mb-5">Technology</span>
-          <h2 className="font-display text-4xl md:text-5xl font-semibold tracking-tight mb-6 mt-4">
-            Mechanical soul.{" "}
-            <span className="text-white">Electric precision.</span>
-          </h2>
-          <p className="text-muted text-lg leading-relaxed">
-            Every Posada hybrid system is engineered so the V8 remains the
-            emotional center while electric torque fills every gap — creating
-            power delivery that feels both organic and instantaneous.
-          </p>
+          <div>
+            <div className="section-number">02 / Engineering</div>
+            <h2 className="mt-5 font-display text-5xl font-medium leading-[0.92] tracking-[-0.06em] md:text-7xl">
+              Built for the <span className="text-terracotta">long way.</span>
+            </h2>
+          </div>
+          <div className="max-w-xl md:justify-self-end">
+            <p className="text-lg leading-relaxed text-ink/70">
+              Every Posada system has one job: make the machine feel more natural, more capable, and more connected to the road beneath it.
+            </p>
+            <div className="mt-6 flex items-center gap-3 font-mono text-[0.62rem] uppercase tracking-[0.14em] text-ink/55">
+              <span className="grid h-8 w-8 place-items-center rounded-full border border-ink/20 text-terracotta"><ArrowUpRight size={14} /></span>
+              Quiet intelligence / visceral response
+            </div>
+          </div>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {features.map((feature, i) => (
+        <div>
+          {features.map((feature, index) => (
             <motion.div
               key={feature.title}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.15 }}
-              transition={{ duration: 0.35, delay: i * 0.05 }}
-              className="group p-7 rounded-3xl bg-surface border border-white/8 hover:border-white/20 transition-all duration-400"
+              viewport={{ once: true, amount: 0.16 }}
+              transition={{ duration: 0.42, delay: index * 0.04 }}
+              className="tech-row"
             >
-              <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-5 group-hover:bg-white group-hover:border-white transition-colors">
-                <feature.icon className="text-white group-hover:text-black transition-colors" size={20} />
+              <span className="tech-row-index">0{index + 1}</span>
+              <div className="flex items-center gap-3">
+                <feature.icon size={18} strokeWidth={1.45} className="text-terracotta" />
+                <h3>{feature.title}</h3>
               </div>
-              <h3 className="font-display text-xl font-medium mb-3 tracking-tight">
-                {feature.title}
-              </h3>
-              <p className="text-muted text-sm leading-relaxed">
-                {feature.description}
-              </p>
+              <p>{feature.description}</p>
+              <ArrowUpRight size={17} className="text-terracotta" />
             </motion.div>
           ))}
         </div>

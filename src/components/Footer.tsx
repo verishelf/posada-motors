@@ -1,56 +1,54 @@
 export default function Footer() {
   return (
-    <footer className="relative border-t border-white/10 pt-20 pb-10 bg-black">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="grid md:grid-cols-4 gap-12 mb-16">
-          <div className="md:col-span-1">
-            <div className="flex items-center gap-2.5 mb-5">
-              <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
-                <span className="font-display font-bold text-black text-sm leading-none">P</span>
-              </div>
-              <span className="font-display text-lg font-medium tracking-tight">Posada</span>
+    <footer className="footer-shell pt-16 pb-8 md:pt-24">
+      <div className="section-wrap">
+        <div className="grid gap-12 md:grid-cols-[1.3fr_0.7fr_0.7fr_0.7fr] md:gap-8">
+          <div>
+            <div className="brand-lockup">
+              <span className="brand-mark">P</span>
+              <span>
+                <small>V8 hybrid / all terrain</small>
+                <strong>Posada</strong>
+              </span>
             </div>
-            <p className="text-sm text-muted leading-relaxed">
-              V8 Hybrid Supercars. Precision. Presence. Power.
+            <p className="mt-6 max-w-xs text-sm leading-relaxed text-muted">
+              Machines for the long way home. Precision, presence, and power with somewhere worth going.
             </p>
           </div>
 
           <div>
-            <h4 className="text-xs font-semibold tracking-wide mb-5 text-white/60">Models</h4>
-            <ul className="space-y-2.5 text-sm text-muted">
-              <li><a href="#models" className="hover:text-white transition-colors rounded-full px-1">Apex</a></li>
-              <li><a href="#models" className="hover:text-white transition-colors rounded-full px-1">Pulse</a></li>
-              <li><a href="#models" className="hover:text-white transition-colors rounded-full px-1">Horizon</a></li>
+            <h3 className="eyebrow mb-5">The range</h3>
+            <ul className="space-y-3">
+              <li><a className="footer-link" href="#models">Apex</a></li>
+              <li><a className="footer-link" href="#models">Pulse</a></li>
+              <li><a className="footer-link" href="#models">Horizon</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-xs font-semibold tracking-wide mb-5 text-white/60">Company</h4>
-            <ul className="space-y-2.5 text-sm text-muted">
-              <li><a href="#about" className="hover:text-white transition-colors">About</a></li>
-              <li><a href="#technology" className="hover:text-white transition-colors">Technology</a></li>
-              <li><a href="#experience" className="hover:text-white transition-colors">Experience</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
+            <h3 className="eyebrow mb-5">Explore</h3>
+            <ul className="space-y-3">
+              <li><a className="footer-link" href="#technology">Engineering</a></li>
+              <li><a className="footer-link" href="#experience">Commission</a></li>
+              <li><a className="footer-link" href="#about">Our story</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-xs font-semibold tracking-wide mb-5 text-white/60">Connect</h4>
-            <ul className="space-y-2.5 text-sm text-muted">
-              <li><a href="#" className="hover:text-white transition-colors">Instagram</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">X / Twitter</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">LinkedIn</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Press</a></li>
+            <h3 className="eyebrow mb-5">Connect</h3>
+            <ul className="space-y-3">
+              <li><a className="footer-link" href="#">Instagram</a></li>
+              <li><a className="footer-link" href="#">Journal</a></li>
+              <li><a className="footer-link" href="#">Press enquiries</a></li>
             </ul>
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-white/10 text-xs text-muted">
-          <p>© 2026 Posada Motors. All rights reserved.</p>
+        <div className="mt-16 flex flex-col gap-4 border-t border-white/15 pt-6 text-[0.62rem] uppercase tracking-[0.13em] text-muted sm:flex-row sm:items-center sm:justify-between">
+          <p>© 2026 Posada Motors / Crafted for the long way</p>
           <div className="flex gap-5">
-            <a href="#" className="hover:text-white transition-colors">Privacy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms</a>
-            <a href="#" className="hover:text-white transition-colors">Cookies</a>
+            <a className="footer-link text-[0.62rem] uppercase tracking-[0.13em]" href="#">Privacy</a>
+            <a className="footer-link text-[0.62rem] uppercase tracking-[0.13em]" href="#">Terms</a>
           </div>
         </div>
       </div>

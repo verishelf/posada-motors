@@ -1,114 +1,68 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { models } from "@/lib/models";
 
 export default function Models() {
-  const router = useRouter();
-
   return (
-    <section id="models" className="relative py-32 overflow-hidden">
-      <div className="absolute inset-0 bg-black pointer-events-none" />
-
-      <div className="relative z-10 mx-auto max-w-7xl px-6">
+    <section id="models" className="site-surface py-24 md:py-36">
+      <div className="section-wrap">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 22 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.15, margin: "0px 0px -40px 0px" }}
-          transition={{ duration: 0.45 }}
-          className="text-center mb-16"
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.55 }}
+          className="mb-12 flex flex-col gap-7 md:mb-16 md:flex-row md:items-end md:justify-between"
         >
-          <span className="chip mb-5">The Collection</span>
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight mt-4">
-            Three expressions of{" "}
-            <span className="text-white">V8 hybrid power</span>
-          </h2>
+          <div>
+            <div className="section-number">01 / The range</div>
+            <h2 className="section-title mt-5 max-w-3xl">
+              Choose your <em>way through.</em>
+            </h2>
+          </div>
+          <p className="max-w-[19rem] text-sm leading-relaxed text-muted">
+            Three expressions of the same belief: the best journeys leave enough room for the unexpected.
+          </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {models.map((model, i) => (
-            <motion.article
+        <div className="grid gap-4 md:grid-cols-2">
+          {models.map((model, index) => (
+            <motion.div
               key={model.id}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.1, margin: "0px 0px -20px 0px" }}
-              transition={{ duration: 0.4, delay: i * 0.06 }}
-              className="car-card group relative bg-surface cursor-pointer"
-              onClick={() => router.push(`/models/${model.id}`)}
-              role="link"
-              tabIndex={0}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === " ") {
-                  e.preventDefault();
-                  router.push(`/models/${model.id}`);
-                }
-              }}
+              viewport={{ once: true, amount: 0.12 }}
+              transition={{ duration: 0.55, delay: index * 0.08 }}
+              className={index === 0 ? "md:row-span-2" : ""}
             >
-              <div className="relative h-56 overflow-hidden rounded-t-[1.75rem]">
+              <Link href={`/models/${model.id}`} className={`range-card group ${index === 0 ? "range-card--featured" : ""}`}>
                 <Image
                   src={model.image}
                   alt={`Posada ${model.name}`}
                   fill
-                  className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  priority={i === 0}
+                  priority={index === 0}
+                  className="object-cover object-center"
+                  sizes={index === 0 ? "(max-width: 768px) 100vw, 50vw" : "(max-width: 768px) 100vw, 25vw"}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none" />
-                <div className="absolute bottom-0 left-0 right-0 p-5 pointer-events-none">
-                  <span className="chip text-[10px] mb-1.5 opacity-90">
-                    {model.tagline}
-                  </span>
-                  <h3 className="font-display text-3xl font-semibold text-white tracking-tight">
-                    {model.name}
-                  </h3>
-                </div>
-              </div>
-
-              <div className="p-6 space-y-5">
-                <p className="text-muted text-sm leading-relaxed">
-                  {model.description}
-                </p>
-
-                <div className="flex flex-wrap gap-2">
-                  <span className="chip text-[11px]">
-                    <span className="text-white font-medium">
-                      {model.specs.find((s) => s.label === "Powertrain")?.value.split(" ")[0] ??
-                        "V8 Hybrid"}
+                <div className="range-card-content">
+                  <div className="flex items-center justify-between gap-4">
+                    <span className="eyebrow">{model.tagline}</span>
+                    <span className="grid h-9 w-9 place-items-center rounded-full border border-white/25 text-sand transition-colors group-hover:border-sand">
+                      <ArrowUpRight size={16} />
                     </span>
-                  </span>
-                  <span className="chip text-[11px]">
-                    <span className="text-white font-medium">
-                      {model.performance[0]?.value}
-                    </span>
-                    <span className="text-muted">0–60</span>
-                  </span>
-                  <span className="chip text-[11px]">
-                    <span className="text-white font-medium">
-                      {
-                        model.specs.find((s) => s.label === "Combined output")
-                          ?.value
-                      }
-                    </span>
-                  </span>
+                  </div>
+                  <h3>{model.name}</h3>
+                  <p>{model.description}</p>
+                  <div className="range-card-meta">
+                    <span>{model.price}</span>
+                    <span>{model.performance[0]?.value} / 0–60</span>
+                  </div>
                 </div>
-
-                <div className="flex items-center justify-between pt-1">
-                  <span className="text-sm text-muted">{model.price}</span>
-                  <Link
-                    href={`/models/${model.id}`}
-                    onClick={(e) => e.stopPropagation()}
-                    className="inline-flex items-center gap-1.5 text-sm font-medium text-white rounded-full px-3 py-1.5 hover:bg-white/10 transition-all group-hover:gap-2.5 relative z-10"
-                  >
-                    Explore
-                    <ArrowRight size={15} />
-                  </Link>
-                </div>
-              </div>
-            </motion.article>
+              </Link>
+            </motion.div>
           ))}
         </div>
       </div>
