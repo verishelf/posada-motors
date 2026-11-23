@@ -45,6 +45,7 @@ export default function Navbar() {
             </nav>
             <div className="hidden items-center gap-3 md:flex">
               <Link href="/suppliers" className="text-[0.67rem] font-bold uppercase tracking-[0.13em] text-mineral/65 transition-colors hover:text-sand">Supplier hub</Link>
+              <Link href="/team" className="text-[0.67rem] font-bold uppercase tracking-[0.13em] text-mineral/65 transition-colors hover:text-sand">The team</Link>
               <Link href={href("experience")} className="text-[0.67rem] font-bold uppercase tracking-[0.13em] text-mineral/65 transition-colors hover:text-sand">Make it yours</Link>
               <Link href={href("experience")} className="btn-primary min-h-0 px-4 py-2.5">Configure <ArrowUpRight size={14} /></Link>
             </div>
@@ -60,6 +61,7 @@ export default function Navbar() {
           <div className="flex h-full flex-col"><div className="eyebrow mb-8">Posada / Extreme by design</div><nav className="flex flex-col">
             {sections.map((section, index) => <motion.div key={section.id} initial={{ opacity: 0, x: -18 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.06 + index * 0.05 }} className="border-b border-white/12"><Link href={href(section.id)} onClick={() => setOpen(false)} className="flex items-center justify-between py-5 font-display text-3xl font-black italic uppercase text-mineral">{section.label}<ArrowUpRight className="text-sand" size={20} /></Link></motion.div>)}
             <Link href="/suppliers" onClick={() => setOpen(false)} className="flex items-center justify-between border-b border-white/12 py-5 font-display text-3xl font-black italic uppercase text-sand">Supplier hub<ArrowUpRight size={20} /></Link>
+            <Link href="/team" onClick={() => setOpen(false)} className="flex items-center justify-between border-b border-white/12 py-5 font-display text-3xl font-black italic uppercase text-sand">Meet the team<ArrowUpRight size={20} /></Link>
           </nav><div className="mt-auto"><Link href={href("experience")} onClick={() => setOpen(false)} className="btn-primary w-full">Configure your Posada <ArrowUpRight size={16} /></Link></div></div>
         </motion.div>}
       </AnimatePresence>

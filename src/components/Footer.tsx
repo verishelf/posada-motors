@@ -31,6 +31,7 @@ export default function Footer() {
               <li><a className="footer-link" href="#technology">Engineering</a></li>
               <li><a className="footer-link" href="#experience">Commission</a></li>
               <li><a className="footer-link" href="#about">Our story</a></li>
+              <li><a className="footer-link" href="/team">Meet the team</a></li>
             </ul>
           </div>
 
