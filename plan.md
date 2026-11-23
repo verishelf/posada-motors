@@ -29,21 +29,21 @@
 
 ### Alternative styles
 
-- Heritage expedition luxury — 0.06
-- Modern alpine utility — 0.04
-- Quiet performance atelier — 0.08
+- Extreme Italian supercar theater — 0.08
+- Carbon-fiber motorsport laboratory — 0.05
+- Neon night-racing editorial — 0.07
 
-### Chosen direction: Heritage expedition luxury
+### Chosen direction: Extreme Italian supercar theater
 
-- **Design Movement:** premium British expedition editorial; tactile, composed, and built around the long way home rather than the racetrack.
-- **Core Principles:** rugged refinement, generous negative space, precise information hierarchy, and restrained contrast.
-- **Color Philosophy:** peat green and ink ground the experience in terrain and engineering; mineral white keeps it premium; sand and terracotta add the warmth of worn leather and dust without turning decorative.
-- **Layout Paradigm:** split-screen storytelling, offset content rails, full-bleed image moments, and section dividers instead of centered card grids.
-- **Signature Elements:** route-line dividers, oversized section indices, and compact all-caps metadata labels.
-- **Interaction Philosophy:** motion should feel like a vehicle settling onto a surface: slow easing, deliberate reveals, and subtle image scale on hover.
-- **Animation:** 450–700ms reveal transitions with ease-out curves; no constant ambient glows; cards lift only a few pixels; mobile motion stays minimal.
-- **Typography System:** Geist for compact utility copy and Playfair Display for the occasional large editorial phrase; uppercase labels use generous tracking.
-- **Brand Essence:** a performance marque for drivers who take the scenic route and expect the machine to be as considered as the destination. Personality: grounded, exacting, quietly confident.
-- **Brand Voice:** headlines are short and directional; CTAs sound like an invitation to depart. Example lines: “Go further. Stay with the feeling.” and “Build the route around you.”
-- **Wordmark & Logo:** a compact square monogram with a diagonal trail cut through the P, paired with a two-line POSADA / MOTORS lockup.
-- **Signature Brand Color:** peat green `#26372f`.
+- **Design Movement:** theatrical Italian supercar editorial; sharp, sensual, and built around visual tension, speed, and the moment before launch.
+- **Core Principles:** angular confidence, high-contrast drama, aggressive hierarchy, and precision as spectacle.
+- **Color Philosophy:** near-black carbon and mineral white create the chassis; fluorescent yellow owns the brand; orange heat accents signal energy and motion.
+- **Layout Paradigm:** diagonal cuts, hard-edged panels, asymmetric hero rails, full-bleed car imagery, and high-density performance data.
+- **Signature Elements:** skewed corners, italic uppercase headlines, and yellow route bars that behave like racing telemetry.
+- **Interaction Philosophy:** motion should feel like throttle response: fast, decisive, and controlled, with image scale and sharp color transitions on hover.
+- **Animation:** 240–650ms transitions with aggressive ease-out curves; cards lift and skew subtly; reveal motion is quick and intentional.
+- **Typography System:** Geist for all-caps performance headlines and condensed utility copy; Playfair remains loaded for compatibility but is no longer the primary display voice.
+- **Brand Essence:** a performance marque for drivers who want the machine to be the event. Personality: extreme, exacting, unapologetic.
+- **Brand Voice:** headlines are short and confrontational; CTAs sound like an invitation to cross a line. Example lines: “No ordinary. Only extreme.” and “Feel the machine.”
+- **Wordmark & Logo:** a sharp yellow square P monogram with an orange diagonal slash, paired with a compact uppercase POSADA lockup.
+- **Signature Brand Color:** fluorescent yellow `#f5c400`.

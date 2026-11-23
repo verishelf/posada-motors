@@ -12,7 +12,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="mt-6 max-w-xs text-sm leading-relaxed text-muted">
-              Machines for the long way home. Precision, presence, and power with somewhere worth going.
+              Machines for the moment before the launch. Precision, presence, and power at full volume.
             </p>
           </div>
 
@@ -45,7 +45,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-16 flex flex-col gap-4 border-t border-white/15 pt-6 text-[0.62rem] uppercase tracking-[0.13em] text-muted sm:flex-row sm:items-center sm:justify-between">
-          <p>© 2026 Posada Motors / Crafted for the long way</p>
+          <p>© 2026 Posada Motors / Crafted for the extreme</p>
           <div className="flex gap-5">
             <a className="footer-link text-[0.62rem] uppercase tracking-[0.13em]" href="#">Privacy</a>
             <a className="footer-link text-[0.62rem] uppercase tracking-[0.13em]" href="#">Terms</a>

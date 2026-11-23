@@ -32,7 +32,7 @@ export default function About() {
             <div className="relative z-10 max-w-lg">
               <span className="quote-mark">“</span>
               <p className="mt-1 font-display text-3xl leading-[1.05] text-mineral md:text-5xl">
-                The purest driving experiences still need a soul — just one that knows when to be quiet.
+                The purest driving experiences need a soul — and ours refuses to whisper.
               </p>
               <div className="mt-8 flex items-center gap-3 font-mono text-[0.6rem] uppercase tracking-[0.14em] text-sand/65">
                 <span className="h-px w-8 bg-terracotta" /> Posada / 2026

@@ -18,13 +18,13 @@ export default function Models() {
           className="mb-12 flex flex-col gap-7 md:mb-16 md:flex-row md:items-end md:justify-between"
         >
           <div>
-            <div className="section-number">01 / The range</div>
+            <div className="section-number">01 / The collection</div>
             <h2 className="section-title mt-5 max-w-3xl">
-              Choose your <em>way through.</em>
+              Machines built to <em>intimidate.</em>
             </h2>
           </div>
           <p className="max-w-[19rem] text-sm leading-relaxed text-muted">
-            Three expressions of the same belief: the best journeys leave enough room for the unexpected.
+            Three expressions of the same belief: performance should be felt before it is understood.
           </p>
         </motion.div>
 
