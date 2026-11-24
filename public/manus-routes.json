@@ -1,1 +1,1 @@
-{"routes":[{"path":"/","title":"Posada Motors"},{"path":"/models/:slug","title":"Posada model"},{"path":"/suppliers","title":"Supplier hub"},{"path":"/team","title":"Meet the team"}]}
+{"routes":[{"path":"/","title":"Posada Motors"},{"path":"/models/:slug","title":"Posada model"},{"path":"/suppliers","title":"Supplier hub"},{"path":"/team","title":"Meet the team"},{"path":"/corporate","title":"Corporate"}]}
