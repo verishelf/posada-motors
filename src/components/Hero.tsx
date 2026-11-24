@@ -10,6 +10,15 @@ export default function Hero() {
   return (
     <section className="hero-section relative isolate overflow-hidden">
       <div aria-hidden="true" className="hero-media absolute inset-0 -z-20" style={{ backgroundImage: `url(${heroImage})` }} />
+      <video
+        aria-hidden="true"
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="hero-video absolute inset-0 -z-20 h-full w-full object-cover"
+        src="/posada-splash.mp4"
+      />
       <div className="hero-overlay absolute inset-0 -z-10" />
       <div className="absolute inset-0 -z-10 opacity-20 [background-image:linear-gradient(rgba(245,196,0,0.2)_1px,transparent_1px),linear-gradient(90deg,rgba(245,196,0,0.2)_1px,transparent_1px)] [background-size:84px_84px]" />
 
