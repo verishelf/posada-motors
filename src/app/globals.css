@@ -76,7 +76,7 @@ a { color: inherit; text-decoration: none; }
 .btn-ghost:hover { border-color: var(--sand); color: var(--sand); transform: translateY(-2px); }
 .section-wrap { width: min(100% - 3rem, 80rem); margin-inline: auto; }
 
-.hero-section { min-height: 48rem; background: var(--peat-deep); }
+.hero-section { min-height: 48rem; margin: .75rem; background: var(--peat-deep); }
 .hero-media { background-position: center; background-size: cover; filter: saturate(0.45) contrast(1.2); }
 .hero-overlay { background: linear-gradient(90deg, rgba(7,7,7,0.98) 0%, rgba(7,7,7,0.85) 32%, rgba(7,7,7,0.16) 76%, rgba(7,7,7,0.54) 100%), linear-gradient(0deg, rgba(7,7,7,0.92) 0%, transparent 52%); }
 .hero-title { max-width: 53rem; color: var(--mineral); font-family: var(--font-geist-sans), sans-serif; font-size: clamp(3.5rem, 9vw, 9rem); font-weight: 900; font-style: italic; letter-spacing: -0.09em; line-height: 0.82; text-transform: uppercase; }
@@ -119,7 +119,7 @@ a { color: inherit; text-decoration: none; }
 .footer-link:hover { color: var(--sand); }
 
 .detail-page { background: var(--peat-deep); color: var(--mineral); }
-.detail-hero { position: relative; min-height: 45rem; display: flex; align-items: flex-end; }
+.detail-hero { position: relative; min-height: 45rem; margin: .75rem; display: flex; align-items: flex-end; }
 .detail-hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(7,7,7,0.94), transparent 70%), linear-gradient(0deg, rgba(7,7,7,0.97), transparent 60%); }
 .detail-surface { background: var(--surface); }
 .detail-light { background: var(--surface-light); color: var(--ink); }
@@ -127,7 +127,7 @@ a { color: inherit; text-decoration: none; }
 
 @media (max-width: 767px) {
   .section-wrap { width: min(100% - 2rem, 80rem); }
-  .hero-section { min-height: 46rem; }
+  .hero-section { min-height: 46rem; margin: .5rem; }
   .hero-overlay { background: linear-gradient(180deg, rgba(7,7,7,0.78) 0%, rgba(7,7,7,0.72) 46%, rgba(7,7,7,0.98) 100%); }
   .hero-stats { width: 100%; }
   .hero-stat { padding-right: 0.7rem; }
@@ -137,5 +137,5 @@ a { color: inherit; text-decoration: none; }
   .tech-row { grid-template-columns: 2rem minmax(0,1fr) 1.25rem; gap: 0.65rem; }
   .tech-row p { grid-column: 2 / -1; max-width: 30rem; }
   .tech-row svg { grid-column: 3; grid-row: 1; }
-  .detail-hero { min-height: 39rem; }
+  .detail-hero { min-height: 39rem; margin: .5rem; }
 }
